@@ -132,7 +132,7 @@ function createMessage(messageData) {
 
     const usr = document.createElement("p");
     usr.className = "username";
-    usr.innerHTML = username;
+    usr.innerHTML = messageData.sender;
     message.appendChild(usr);
 
     for (let paragraph of messageData.message.split("\n")) {

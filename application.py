@@ -73,3 +73,10 @@ def switch_channel():
             "channelName": session["channelName"],
             "channels": list(chat.keys())}
     return jsonify(data)
+
+
+@app.route("/logout", methods=["POST"])
+def logout():
+    session["username"] = ""
+    session["channelName"] = "general"
+    return redirect(url_for("index"))
