@@ -20,7 +20,8 @@ $username-time-color: #84b3e1;
   border-right: 1px solid;
   height: 100vh;
   display: grid;
-  grid-template-rows: 10% 80% 10%;
+  grid-template-rows: 100px calc(100% - 200px) 100px;
+  overflow-x: hidden;
 }
 
 #buttons {
@@ -144,8 +145,19 @@ $username-time-color: #84b3e1;
 #channel-creation {
   color: white;
   padding: 10px;
+  display: flex;
+  align-self: end;
+  flex-direction: column;
 }
 
-#logout{
+.btn-color {
   color: white;
+}
+
+#logout:hover {
+  color: white;
+}
+
+#new-channel-name {
+  padding-left: 10px;
 }
